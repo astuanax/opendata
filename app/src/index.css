@@ -1,0 +1,545 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*@layer base {*/
+/*    :root {*/
+/*        --background: 0 0% 100%;*/
+/*        --foreground: 240 10% 3.9%;*/
+/*        --card: 0 0% 100%;*/
+/*        --card-foreground: 240 10% 3.9%;*/
+/*        --popover: 0 0% 100%;*/
+/*        --popover-foreground: 240 10% 3.9%;*/
+/*        --primary: 240 5.9% 10%;*/
+/*        --primary-foreground: 0 0% 98%;*/
+/*        --secondary: 240 4.8% 95.9%;*/
+/*        --secondary-foreground: 240 5.9% 10%;*/
+/*        --muted: 240 4.8% 95.9%;*/
+/*        --muted-foreground: 240 3.8% 46.1%;*/
+/*        --accent: 240 4.8% 95.9%;*/
+/*        --accent-foreground: 240 5.9% 10%;*/
+/*        --destructive: 0 84.2% 60.2%;*/
+/*        --destructive-foreground: 0 0% 98%;*/
+/*        --border: 240 5.9% 90%;*/
+/*        --input: 240 5.9% 90%;*/
+/*        --ring: 240 10% 3.9%;*/
+/*        --radius: 0.5rem;*/
+/*        --chart-1: 12 76% 61%;*/
+/*        --chart-2: 173 58% 39%;*/
+/*        --chart-3: 197 37% 24%;*/
+/*        --chart-4: 43 74% 66%;*/
+/*        --chart-5: 27 87% 67%;*/
+/*    }*/
+
+/*    .dark {*/
+/*        --background: 240 10% 3.9%;*/
+/*        --foreground: 0 0% 98%;*/
+/*        --card: 240 10% 3.9%;*/
+/*        --card-foreground: 0 0% 98%;*/
+/*        --popover: 240 10% 3.9%;*/
+/*        --popover-foreground: 0 0% 98%;*/
+/*        --primary: 0 0% 98%;*/
+/*        --primary-foreground: 240 5.9% 10%;*/
+/*        --secondary: 240 3.7% 15.9%;*/
+/*        --secondary-foreground: 0 0% 98%;*/
+/*        --muted: 240 3.7% 15.9%;*/
+/*        --muted-foreground: 240 5% 64.9%;*/
+/*        --accent: 240 3.7% 15.9%;*/
+/*        --accent-foreground: 0 0% 98%;*/
+/*        --destructive: 0 62.8% 30.6%;*/
+/*        --destructive-foreground: 0 0% 98%;*/
+/*        --border: 240 3.7% 15.9%;*/
+/*        --input: 240 3.7% 15.9%;*/
+/*        --ring: 240 4.9% 83.9%;*/
+/*        --chart-1: 220 70% 50%;*/
+/*        --chart-2: 160 60% 45%;*/
+/*        --chart-3: 30 80% 55%;*/
+/*        --chart-4: 280 65% 60%;*/
+/*        --chart-5: 340 75% 55%;*/
+/*    }*/
+/*}*/
+
+@layer base {
+    :root {
+        --background: 142 70% 100%;
+        --foreground: 142 72% 5%;
+        --muted: 262 36% 92%;
+        --muted-foreground: 262 4% 35%;
+        --popover: 142 70% 100%;
+        --popover-foreground: 142 72% 5%;
+        --card: 142 70% 100%;
+        --card-foreground: 142 72% 5%;
+        --border: 142 12% 91%;
+        --input: 142 12% 91%;
+        --primary: 141 34.48% 11.37%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 21.86 76.09% 36.08%;
+        --secondary-foreground: 262 76% 96%;
+        --accent: 52.08 83.87% 46.86%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 10 87% 35%;
+        --destructive-foreground: 10 87% 95%;
+        --ring: 142 76% 36%;
+        --radius: 0.5rem;
+        --sidebar-background: 0 0% 98%;
+        --sidebar-foreground: 240 5.3% 26.1%;
+        --sidebar-primary: 240 5.9% 10%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 240 4.8% 95.9%;
+        --sidebar-accent-foreground: 240 5.9% 10%;
+        --sidebar-border: 220 13% 91%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
+
+    .dark {
+        --background: 142 57% 3%;
+        --foreground: 142 24% 97%;
+        --muted: 262 36% 8%;
+        --muted-foreground: 262 4% 65%;
+        --popover: 142 57% 3%;
+        --popover-foreground: 142 24% 97%;
+        --card: 142 57% 3%;
+        --card-foreground: 142 24% 97%;
+        --border: 142 12% 11%;
+        --input: 142 12% 11%;
+        --primary: 141 34.48% 11.37%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 21.86 76.09% 36.08%;
+        --secondary-foreground: 262 76% 96%;
+        --accent: 51.94 84.1% 46.86%;
+        --accent-foreground: 21.86 76.09% 36.08%;
+        --destructive: 10 87% 55%;
+        --destructive-foreground: 0 0% 100%;
+        --ring: 142 76% 36%;
+        --sidebar-background: 240 5.9% 10%;
+        --sidebar-foreground: 240 4.8% 95.9%;
+        --sidebar-primary: 224.3 76.3% 48%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 240 3.7% 15.9%;
+        --sidebar-accent-foreground: 240 4.8% 95.9%;
+        --sidebar-border: 240 3.7% 15.9%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
+}
+
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+
+@keyframes fumes {
+    50% {
+        transform: scale(1.5);
+        opacity: 0
+    }
+    51% {
+        transform: scale(0.8)
+    }
+    100% {
+        opacity: 0.6;
+        transform: scale(1)
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate3d(0px, 0px, 0)
+    }
+    50% {
+        transform: translate3d(0px, -4px, 0)
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0)
+    }
+}
+
+@keyframes exhaust {
+    0% {
+        background: linear-gradient(to bottom, transparent 10%, #fff 100%)
+    }
+    50% {
+        background: linear-gradient(to bottom, transparent 8%, #fff 100%)
+    }
+    75% {
+        background: linear-gradient(to bottom, transparent 12%, #fff 100%)
+    }
+}
+
+@keyframes fumes2 {
+    50% {
+        transform: scale(1.1)
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg)
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg)
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg)
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg)
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg)
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg)
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg)
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg)
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg)
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg)
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg)
+    }
+}
+
+@keyframes launch {
+    0% {
+        transform: translateY(0)
+    }
+    10% {
+        transform: translateY(-200px)
+    }
+    100% {
+        transform: translateY(-600px)
+    }
+}
+
+@keyframes launchSwoosh {
+    0% {
+        transform: matrix(1, 0, 0, 1, 0, 0)
+    }
+    10% {
+        opacity: .15;
+        transform: matrix(1, 0, 0, 5, 0, -125)
+    }
+    100% {
+        opacity: 0;
+        transform: matrix(1, 0, 0, 10, 0, -250)
+    }
+}
+
+.wasp-takeoff h3 {
+    color: #fff;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite
+}
+
+.wasp-takeoff {
+    background: #F7981E;
+    padding: 2em 0 1em 0
+}
+
+
+@media (min-width: 576px) {
+    .wasp-takeoff {
+        position: relative;
+    }
+
+    .wasp-takeoff #swoosh {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: transparent url("./assets/swoosh.svg") no-repeat center bottom;
+        background-size: 40%
+    }
+
+    .wasp-takeoff #swoosh.launchSwoosh {
+        animation: launchSwoosh 1s 0.3s 1 linear
+    }
+
+    .wasp-takeoff #wasp {
+        top: 0;
+        bottom: 11%;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: transparent url("./assets/Wasp-Front.png") no-repeat center center;
+        background-size: 50%
+    }
+
+    .wasp-takeoff #wasp.launch {
+        animation: launch 1s 0.3s 1 ease-out !important
+    }
+
+    .wasp-takeoff #wasp.bounce {
+        animation: bounce 0.5s infinite
+    }
+
+    .wasp-takeoff #wasp.shake {
+        animation: shake 1s infinite
+    }
+
+    .wasp-takeoff #clouds {
+        overflow: hidden;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute
+    }
+
+    .wasp-takeoff #clouds .go li {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0);
+        list-style: none;
+        position: absolute;
+        border-radius: 100%
+    }
+
+    .wasp-takeoff #clouds .go li:nth-child(5) {
+        background-color: rgba(255, 255, 255, 0.81);
+        width: 130px;
+        height: 130px;
+        left: -45px;
+        bottom: -56px
+    }
+
+    .wasp-takeoff #clouds .go li:nth-child(6) {
+        background-color: rgba(255, 255, 255, 0.25);
+        width: 150px;
+        height: 150px;
+        left: -55px;
+        bottom: -66px
+    }
+
+    .wasp-takeoff #clouds .go li:nth-child(7) {
+        background-color: rgba(255, 255, 255, 0.75);
+        width: 130px;
+        height: 130px;
+        left: 63px;
+        bottom: -90px
+    }
+
+    .wasp-takeoff #clouds .go li:nth-child(8) {
+        background-color: rgba(255, 255, 255, 0.25);
+        width: 150px;
+        height: 150px;
+        left: 53px;
+        bottom: -100px
+    }
+
+    .wasp-takeoff #clouds .go li:nth-child(9) {
+        background-color: rgba(255, 255, 255, 0.75);
+        width: 165px;
+        height: 165px;
+        left: 185px;
+        bottom: -85px
+    }
+
+    .wasp-takeoff #clouds .go li:nth-child(10) {
+        background-color: rgba(255, 255, 255, 0.25);
+        width: 185px;
+        height: 185px;
+        left: 175px;
+        bottom: -95px
+    }
+
+    .wasp-takeoff #clouds .go li:nth-child(11) {
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 80px;
+        height: 80px;
+        left: 350px;
+        bottom: -40px
+    }
+
+    .wasp-takeoff #clouds .go li:nth-child(12) {
+        background-color: rgba(255, 255, 255, 0.25);
+        width: 100px;
+        height: 100px;
+        left: 340px;
+        bottom: -50px
+    }
+
+    .wasp-takeoff #clouds .exhaust-fumes li {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0.5);
+        list-style: none;
+        position: absolute;
+        border-radius: 100%
+    }
+
+    .wasp-takeoff #clouds .exhaust-fumes li:first-child {
+        width: 200px;
+        height: 200px;
+        bottom: -100px;
+        left: 140px;
+        animation: fumes 2s infinite
+    }
+
+    .wasp-takeoff #clouds .exhaust-fumes li:nth-child(2) {
+        background-color: rgba(255, 255, 255, 0.25);
+        width: 220px;
+        height: 220px;
+        bottom: -100px;
+        left: 130px;
+        animation: fumes 2s infinite
+    }
+
+    .wasp-takeoff #clouds .exhaust-fumes li:nth-child(3) {
+        width: 120px;
+        height: 120px;
+        left: 70px;
+        bottom: -10px;
+        animation: fumes 2.5s .5s infinite
+    }
+
+    .wasp-takeoff #clouds .exhaust-fumes li:nth-child(4) {
+        background-color: rgba(255, 255, 255, 0.25);
+        width: 140px;
+        height: 140px;
+        left: 60px;
+        bottom: -10px;
+        animation: fumes 2.5s .5s infinite
+    }
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    .image {
+        background: url("./assets/wasp-cloud@2x.png") no-repeat
+    }
+
+    .wasp-takeoff .row div {
+        padding: 1em
+    }
+}
+
+@media (max-width: 641px) {
+    .table-wrapper {
+        padding-bottom: 1rem;
+        overflow: scroll;
+        background: linear-gradient(
+                90deg,
+                var(--secondary) 20%,
+                rgba(255, 255, 255, 0)
+        ) 155px 0,
+        linear-gradient(90deg, rgba(255, 255, 255, 0), var(--secondary) 80%) 100% 0,
+        radial-gradient(
+                farthest-side at 0 0,
+                var(--accent),
+                rgba(0, 0, 0, 0)
+        ) 155px 0,
+        radial-gradient(
+                farthest-side at 100% 0%,
+                var(--accent),
+                rgba(0, 0, 0, 0)
+        ) 100% 0;
+
+        background-repeat: no-repeat;
+        background-size: 20% 200%, 20% 200%, 8% 400%, 8% 400%;
+        background-attachment: local, local, scroll, scroll;
+    }
+}
+
+.table-wrapper::-webkit-scrollbar {
+    height: 1rem;
+    z-index: 100;
+    position: relative;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    box-shadow: 0 -1rem 0 0 var(--secondary);
+    background-color: #cfd793;
+}
+
+.mockup-browser {
+    border-radius: 1rem;
+    border-radius: var(--rounded-box,1rem);
+    overflow: hidden;
+    overflow-x: auto;
+    position: relative;
+}
+.mockup-browser .mockup-browser-toolbar {
+    align-items: center;
+    display: inline-flex;
+    margin-bottom: .25rem;
+    margin-top: .25rem;
+    padding-right: 1.4em;
+    width: 100%;
+}
+.mockup-browser .mockup-browser-toolbar .input {
+    --tw-bg-opacity: 1;
+    display: block;
+    height: 1.75rem;
+    line-height:1.75rem;
+    font-size: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    padding-left: 2rem;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 24rem;
+}
+.mockup-browser .mockup-browser-toolbar:before {
+    aspect-ratio: 1 / 1;
+    border-radius: 9999px;
+    box-shadow: 1.4em 0, 2.8em 0, 4.2em 0;
+    content: "";
+    display: inline-block;
+    height: .75rem;
+    margin-right: 4.8rem;
+    opacity: .3;
+}
+.mockup-browser .mockup-browser-toolbar .input:before {
+    --tw-translate-y: -50%;
+    aspect-ratio: 1 / 1;
+    border-color: currentColor;
+    border-radius: 9999px;
+    border-width: 2px;
+    content: "";
+    height: .75rem;
+    left: .5rem;
+    opacity: .6;
+    position: absolute;
+    top: 50%;
+    transform: translate(var(--tw-translate-x), -50%) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.mockup-browser .mockup-browser-toolbar .input:after {
+    --tw-translate-y: 25%;
+    --tw-rotate: -45deg;
+    border-color: currentColor;
+    border-radius: 9999px;
+    border-width: 1px;
+    content: "";
+    height: .5rem;
+    left: 1.25rem;
+    opacity: .6;
+    position: absolute;
+    top: 50%;
+    transform: translate(var(--tw-translate-x), 25%) rotate(-45deg) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}

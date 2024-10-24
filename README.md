@@ -1,2 +1,0 @@
-# opendata
-adem open data 
